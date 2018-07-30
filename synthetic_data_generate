@@ -1,0 +1,21 @@
+clear
+%%%%Set dimension "d" and number of data vectors "r"
+d = 1000;
+r= d;
+
+X = randn(d,r);
+X=X.*(vecnorm(X).^(-1));
+
+beta = randn(d,1);beta = beta/norm(beta);
+
+
+h=X'*beta;
+
+p = (1+exp(h)).^(-1);
+
+u = rand(r,1);
+
+%%%generate binary dependent variables%%%%
+Y = (sign(p - u)');
+
+U = X.*Y;
