@@ -19,3 +19,5 @@ u = rand(r,1);
 Y = (sign(p - u)');
 
 U = X.*Y;
+
+save synthetic_data
