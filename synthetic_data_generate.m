@@ -1,7 +1,6 @@
-clear
-%%%%Set dimension "d" and number of data vectors "r"
-d = 1000;
-r= d;
+function [U] = synthetic_data_generate(d,r)
+%%%% "d" is dimension and "r" is number of data vectors
+
 
 X = randn(d,r);
 X=X.*(vecnorm(X).^(-1));
@@ -19,5 +18,4 @@ u = rand(r,1);
 Y = (sign(p - u)');
 
 U = X.*Y;
-
-save synthetic_data
+end
