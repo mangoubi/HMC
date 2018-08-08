@@ -1,4 +1,5 @@
-# All files are writted in MATLAB code
+# HMC
+All files are writted in MATLAB code
 
 synthetic_data_generate.m generates synthetic data with inpus "d" (the dimension) and "r" (the number of data points).
 
